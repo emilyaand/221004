@@ -1,0 +1,51 @@
+﻿@using _221004.ViewModels.Home;
+@model HomeIndexViewModel
+<html>
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Student student in Model.Students)
+            {
+                <tr>
+                    <th scope="row">@student.ID</th>
+                    <td>@student.Name</td>
+                    <td>@student.Surname</td>
+                    <td>@student.Age</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Group group in Model.Groups)
+            {
+                <tr>
+                    <th scope="row">@group.ID</th>
+                    <td>@group.Name</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</body>
+</html>
